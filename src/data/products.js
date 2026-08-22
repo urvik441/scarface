@@ -131,7 +131,7 @@ export const products = [
     categoryLabel: 'Agricultural',
     shortDescription: 'Quality non-basmati rice varieties including IR-64, Sona Masoori, and Swarna — competitively priced for global markets.',
     description: `India produces a wide variety of non-basmati rice varieties that are in high demand globally for their quality and value. SCARFACE supplies multiple non-basmati varieties suited for different regional preferences and end uses.\n\nVarieties include IR-64 Parboiled, Sona Masoori, Swarna, and Long Grain White Rice. These are widely consumed across Africa, Middle East, Southeast Asia, and other regions.`,
-    image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9d8cf?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=800&q=80',
     specifications: [
       { label: 'Varieties', value: 'IR-64, Sona Masoori, Swarna, Long Grain' },
       { label: 'Moisture', value: '14% max' },
