@@ -179,7 +179,7 @@ export default function Contact() {
                       Thank you for reaching out. We will review your enquiry and get back to you shortly.
                     </p>
                     <button
-                      onClick={() => { setStatus('idle'); setForm({ name:'',company:'',email:'',phone:'',country:'',product:'General Inquiry',message:'' }) }}
+                      onClick={() => { setStatus('idle'); setForm({ name:'',company:'',email:'',phone:'',country:'',product: prefilledProduct || 'General Inquiry',message:'' }) }}
                       className="btn-secondary"
                     >
                       Send Another Enquiry

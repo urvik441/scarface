@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Mail, Phone, Linkedin, Twitter, Instagram, ArrowRight } from 'lucide-react'
+import { products } from '../data/products'
 
 const footerNav = [
   { to: '/', label: 'Home' },
@@ -9,14 +10,10 @@ const footerNav = [
   { to: '/contact', label: 'Contact Us' },
 ]
 
-const productLinks = [
-  { to: '/products/cumin-seeds', label: 'Cumin Seeds' },
-  { to: '/products/turmeric', label: 'Turmeric' },
-  { to: '/products/groundnut', label: 'Groundnut' },
-  { to: '/products/dehydrated-onion', label: 'Dehydrated Onion' },
-  { to: '/products/basmati-rice', label: 'Basmati Rice' },
-  { to: '/products/sesame-seeds', label: 'Sesame Seeds' },
-]
+const productLinks = products.slice(0, 6).map(p => ({
+  to: `/products/${p.slug}`,
+  label: p.name,
+}))
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
