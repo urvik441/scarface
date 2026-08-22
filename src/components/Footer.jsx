@@ -29,15 +29,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-flex mb-5 group" aria-label="SCARFACE Home">
-              <div
-                className="flex items-center justify-center rounded-xl px-4 py-2 transition-all duration-300 group-hover:bg-white/8"
-                style={{ background: 'rgba(10, 20, 28, 0.6)' }}
-              >
+              <div className="rounded-xl overflow-hidden transition-all duration-300 group-hover:scale-105">
                 <img
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="SCARFACE — The Face of Global Trade"
-                  className="h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-                  style={{ mixBlendMode: 'screen' }}
+                  className="h-20 w-auto object-contain"
+                  style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.25))' }}
                 />
               </div>
             </Link>

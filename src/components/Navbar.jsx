@@ -39,22 +39,18 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}>
       <div className="container-max">
         <nav className="flex items-center justify-between h-18 py-3" aria-label="Main navigation">
-          {/* Logo — shown on dark background pill so white bg of JPEG is hidden */}
-          <Link
-            to="/"
-            className="flex-shrink-0 group flex items-center"
-            aria-label="SCARFACE Home"
-          >
-            <div
-              className="flex items-center justify-center rounded-xl px-3 py-1.5 transition-all duration-300 group-hover:bg-white/10"
-              style={{ background: 'rgba(15, 28, 35, 0.7)' }}
-            >
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0 group" aria-label="SCARFACE Home">
+            <div className="w-12 h-12 rounded-lg overflow-hidden border border-white/20 group-hover:border-gold/50 transition-colors duration-300 bg-white flex items-center justify-center">
               <img
                 src="/logo.jpg"
-                alt="SCARFACE — The Face of Global Trade"
-                className="h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-                style={{ mixBlendMode: 'screen' }}
+                alt="SCARFACE Logo"
+                className="w-full h-full object-contain"
               />
+            </div>
+            <div className="hidden sm:block">
+              <span className="block font-heading font-bold text-white text-lg leading-none tracking-widest">SCARFACE</span>
+              <span className="block text-gold text-[9px] tracking-[0.2em] font-medium mt-0.5">THE FACE OF GLOBAL TRADE</span>
             </div>
           </Link>
 
@@ -103,9 +99,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          mobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        } bg-navy-dark border-t border-white/10`}
+        className={`lg:hidden transition-all duration-300 overflow-hidden ${mobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          } bg-navy-dark border-t border-white/10`}
       >
         <div className="container-max py-4 flex flex-col gap-1">
           {navLinks.map(link => (
@@ -114,8 +109,7 @@ export default function Navbar() {
               to={link.to}
               end={link.to === '/'}
               className={({ isActive }) =>
-                `block px-4 py-3 text-base font-medium font-heading tracking-wide rounded transition-all duration-200 ${
-                  isActive ? 'text-gold bg-white/5' : 'text-white/80 hover:text-white hover:bg-white/5'
+                `block px-4 py-3 text-base font-medium font-heading tracking-wide rounded transition-all duration-200 ${isActive ? 'text-gold bg-white/5' : 'text-white/80 hover:text-white hover:bg-white/5'
                 }`
               }
             >
