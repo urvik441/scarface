@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Mail, Phone, Linkedin, Twitter, Instagram, ArrowRight } from 'lucide-react'
 import { products } from '../data/products'
+import { companyDetails } from '../data/company'
 
 const footerNav = [
   { to: '/', label: 'Home' },
@@ -99,21 +100,20 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin size={15} className="text-gold mt-0.5 flex-shrink-0" />
-                <span>Gujarat, India<br />
-                  {/* PLACEHOLDER — replace with actual address */}
-                  <span className="text-white/40 text-xs">(Address — placeholder)</span>
+                <span>{companyDetails.location}<br />
+                  <span className="text-white/40 text-xs">{companyDetails.fullAddress}</span>
                 </span>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Mail size={15} className="text-gold flex-shrink-0" />
-                <a href="mailto:info@example.com" className="hover:text-gold transition-colors">
-                  info@example.com {/* PLACEHOLDER */}
+                <a href={`mailto:${companyDetails.email}`} className="hover:text-gold transition-colors">
+                  {companyDetails.email}
                 </a>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Phone size={15} className="text-gold flex-shrink-0" />
-                <a href="tel:+91XXXXXXXXXX" className="hover:text-gold transition-colors">
-                  +91 XXXXX XXXXX {/* PLACEHOLDER */}
+                <a href={`tel:${companyDetails.phone.replace(/\s+/g, '')}`} className="hover:text-gold transition-colors">
+                  {companyDetails.phone}
                 </a>
               </li>
             </ul>

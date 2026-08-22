@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { MapPin, Mail, Phone, Send, CheckCircle2, AlertCircle } from 'lucide-react'
 import { products } from '../data/products'
+import { companyDetails } from '../data/company'
 
 const productOptions = ['General Inquiry', ...products.map(p => p.name)]
 
@@ -17,7 +18,8 @@ const countries = [
 
 export default function Contact() {
   const [searchParams] = useSearchParams()
-  const prefilledProduct = searchParams.get('product') || ''
+  const rawParam = searchParams.get('product') || ''
+  const prefilledProduct = productOptions.includes(rawParam) ? rawParam : 'General Inquiry'
 
   const [form, setForm] = useState({
     name: '',
@@ -25,7 +27,7 @@ export default function Contact() {
     email: '',
     phone: '',
     country: '',
-    product: prefilledProduct || 'General Inquiry',
+    product: prefilledProduct,
     message: '',
   })
   const [errors, setErrors] = useState({})
@@ -111,22 +113,22 @@ export default function Contact() {
                   {
                     Icon: MapPin,
                     label: 'Address',
-                    value: 'Gujarat, India',
-                    sub: '(Address — placeholder, to be updated)',
+                    value: companyDetails.location,
+                    sub: companyDetails.fullAddress,
                   },
                   {
                     Icon: Mail,
                     label: 'Email',
-                    value: 'info@example.com', // PLACEHOLDER
-                    href: 'mailto:info@example.com',
-                    sub: '(Placeholder — update with real email)',
+                    value: companyDetails.email,
+                    href: `mailto:${companyDetails.email}`,
+                    sub: `Sales: ${companyDetails.salesEmail}`,
                   },
                   {
                     Icon: Phone,
-                    label: 'Phone',
-                    value: '+91 XXXXX XXXXX', // PLACEHOLDER
-                    href: 'tel:+91XXXXXXXXXX',
-                    sub: '(Placeholder — update with real number)',
+                    label: 'Phone & WhatsApp',
+                    value: companyDetails.phone,
+                    href: `tel:${companyDetails.phone.replace(/\s+/g, '')}`,
+                    sub: companyDetails.workingHours,
                   },
                 ].map(({ Icon, label, value, href, sub }) => (
                   <div key={label} className="flex gap-4">
