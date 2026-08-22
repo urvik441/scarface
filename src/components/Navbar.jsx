@@ -39,18 +39,22 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}>
       <div className="container-max">
         <nav className="flex items-center justify-between h-18 py-3" aria-label="Main navigation">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0 group" aria-label="SCARFACE Home">
-            <div className="w-12 h-12 rounded-lg overflow-hidden border border-white/20 group-hover:border-gold/50 transition-colors duration-300 bg-white flex items-center justify-center">
+          {/* Logo — shown on dark background pill so white bg of JPEG is hidden */}
+          <Link
+            to="/"
+            className="flex-shrink-0 group flex items-center"
+            aria-label="SCARFACE Home"
+          >
+            <div
+              className="flex items-center justify-center rounded-xl px-3 py-1.5 transition-all duration-300 group-hover:bg-white/10"
+              style={{ background: 'rgba(15, 28, 35, 0.7)' }}
+            >
               <img
                 src="/logo.jpg"
-                alt="SCARFACE Logo"
-                className="w-full h-full object-contain"
+                alt="SCARFACE — The Face of Global Trade"
+                className="h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                style={{ mixBlendMode: 'screen' }}
               />
-            </div>
-            <div className="hidden sm:block">
-              <span className="block font-heading font-bold text-white text-lg leading-none tracking-widest">SCARFACE</span>
-              <span className="block text-gold text-[9px] tracking-[0.2em] font-medium mt-0.5">THE FACE OF GLOBAL TRADE</span>
             </div>
           </Link>
 

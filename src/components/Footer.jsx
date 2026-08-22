@@ -28,13 +28,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-5 group" aria-label="SCARFACE Home">
-              <div className="w-14 h-14 rounded-lg overflow-hidden border border-gold/30 bg-white flex items-center justify-center">
-                <img src="/logo.jpg" alt="SCARFACE Logo" className="w-full h-full object-contain" />
-              </div>
-              <div>
-                <span className="block font-heading font-bold text-white text-xl tracking-widest">SCARFACE</span>
-                <span className="block text-gold text-[9px] tracking-[0.18em] font-medium">THE FACE OF GLOBAL TRADE</span>
+            <Link to="/" className="inline-flex mb-5 group" aria-label="SCARFACE Home">
+              <div
+                className="flex items-center justify-center rounded-xl px-4 py-2 transition-all duration-300 group-hover:bg-white/8"
+                style={{ background: 'rgba(10, 20, 28, 0.6)' }}
+              >
+                <img
+                  src="/logo.jpg"
+                  alt="SCARFACE — The Face of Global Trade"
+                  className="h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                  style={{ mixBlendMode: 'screen' }}
+                />
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
