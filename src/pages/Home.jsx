@@ -7,7 +7,6 @@ import {
 import SectionHeading from '../components/SectionHeading'
 import ProductCard from '../components/ProductCard'
 import StatCounter from '../components/StatCounter'
-import TestimonialCard from '../components/TestimonialCard'
 import CTASection from '../components/CTASection'
 import { products } from '../data/products'
 
@@ -91,31 +90,6 @@ const stepsData = [
   },
 ]
 
-/* ─── TESTIMONIALS DATA ─────────────────────────────────────────────── */
-const testimonials = [
-  {
-    quote: 'SCARFACE has been an excellent sourcing partner for our spice blending operations. The cumin and coriander quality has been consistently outstanding across multiple shipments.',
-    name: 'Ahmed Al-Rashid',
-    company: 'Al-Rashid Trading Co.',
-    country: 'UAE',
-    rating: 5,
-  },
-  {
-    quote: 'We have been importing groundnut and sesame seeds through SCARFACE for our food processing plant. Communication is clear, documentation is proper, and deliveries are on time.',
-    name: 'Michael Okonkwo',
-    company: 'PanAfrica Foods Ltd.',
-    country: 'Nigeria',
-    rating: 5,
-  },
-  {
-    quote: 'Reliable, professional, and quality-focused. The dehydrated onion and garlic from SCARFACE meets our European food safety requirements without any issues.',
-    name: 'Sophia Müller',
-    company: 'EuroSpice GmbH',
-    country: 'Germany',
-    rating: 5,
-  },
-]
-
 /* ─── STATS DATA ─────────────────────────────────────────────────────── */
 const statsData = [
   { value: '10', suffix: '+', label: 'Product Categories' },
@@ -131,7 +105,6 @@ export default function Home() {
   const introRef = useFadeIn()
   const whyRef = useFadeIn()
   const stepsRef = useFadeIn()
-  const testiRef = useFadeIn()
 
   const featuredProducts = products.slice(0, 6)
 
@@ -439,25 +412,6 @@ export default function Home() {
               Explore Global Markets
               <ArrowRight size={16} />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── TESTIMONIALS ───────────────────────────────────────── */}
-      <section id="testimonials" className="section-pad bg-offwhite" aria-label="Client testimonials">
-        <div className="container-max">
-          <SectionHeading
-            eyebrow="What Clients Say"
-            heading="Voices of Trust"
-            subheading="Placeholder testimonials representing the level of relationships SCARFACE aims to build with international buyers."
-          />
-          <div
-            ref={testiRef}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 opacity-0 translate-y-8 transition-all duration-700"
-          >
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.name} {...t} />
-            ))}
           </div>
         </div>
       </section>
