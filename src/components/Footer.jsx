@@ -100,7 +100,7 @@ export default function Footer() {
                 <MapPin size={16} className="text-gold mt-0.5 flex-shrink-0" />
                 <span>
                   <strong className="text-navy">{companyDetails.location}</strong><br />
-                  <span className="text-charcoal/55 text-xs">{companyDetails.fullAddress}</span>
+                  <span className="text-charcoal/60 text-xs leading-snug block mt-0.5">{companyDetails.fullAddress}</span>
                 </span>
               </li>
               <li className="flex items-center gap-3 text-charcoal/75 text-sm">
@@ -109,11 +109,16 @@ export default function Footer() {
                   {companyDetails.email}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-charcoal/75 text-sm">
-                <Phone size={16} className="text-gold flex-shrink-0" />
-                <a href={`tel:${companyDetails.phone.replace(/\s+/g, '')}`} className="hover:text-gold font-medium transition-colors">
-                  {companyDetails.phone}
-                </a>
+              <li className="flex items-start gap-3 text-charcoal/75 text-sm">
+                <Phone size={16} className="text-gold mt-0.5 flex-shrink-0" />
+                <div className="space-y-0.5">
+                  <a href={`tel:${companyDetails.phone.replace(/\s+/g, '')}`} className="hover:text-gold font-medium transition-colors block">
+                    {companyDetails.phone}
+                  </a>
+                  <a href={`tel:${companyDetails.phoneSecondary.replace(/\s+/g, '')}`} className="hover:text-gold font-medium transition-colors block">
+                    {companyDetails.phoneSecondary}
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

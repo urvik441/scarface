@@ -112,39 +112,49 @@ export default function Contact() {
                 {[
                   {
                     Icon: MapPin,
-                    label: 'Address',
-                    value: companyDetails.location,
-                    sub: companyDetails.fullAddress,
+                    label: 'Office Address',
+                    value: companyDetails.fullAddress,
+                    sub: companyDetails.location,
                   },
                   {
                     Icon: Mail,
-                    label: 'Email',
+                    label: 'Official Email',
                     value: companyDetails.email,
                     href: `mailto:${companyDetails.email}`,
-                    sub: `Sales: ${companyDetails.salesEmail}`,
+                    sub: companyDetails.workingHours,
                   },
                   {
                     Icon: Phone,
                     label: 'Phone & WhatsApp',
-                    value: companyDetails.phone,
-                    href: `tel:${companyDetails.phone.replace(/\s+/g, '')}`,
+                    customRender: (
+                      <div className="space-y-1">
+                        <a href={`tel:${companyDetails.phone.replace(/\s+/g, '')}`} className="text-navy font-medium text-sm hover:text-gold transition-colors block">
+                          {companyDetails.phone}
+                        </a>
+                        <a href={`tel:${companyDetails.phoneSecondary.replace(/\s+/g, '')}`} className="text-navy font-medium text-sm hover:text-gold transition-colors block">
+                          {companyDetails.phoneSecondary}
+                        </a>
+                      </div>
+                    ),
                     sub: companyDetails.workingHours,
                   },
-                ].map(({ Icon, label, value, href, sub }) => (
+                ].map(({ Icon, label, value, href, customRender, sub }) => (
                   <div key={label} className="flex gap-4">
                     <div className="w-10 h-10 rounded-xl bg-navy/8 border border-navy/15 flex items-center justify-center flex-shrink-0">
                       <Icon size={16} className="text-navy" />
                     </div>
                     <div>
                       <p className="text-gold text-[9px] tracking-widest uppercase font-heading font-semibold mb-0.5">{label}</p>
-                      {href ? (
-                        <a href={href} className="text-navy font-medium text-sm hover:text-gold transition-colors block">
+                      {customRender ? (
+                        customRender
+                      ) : href ? (
+                        <a href={href} className="text-navy font-medium text-sm hover:text-gold transition-colors block leading-snug">
                           {value}
                         </a>
                       ) : (
-                        <p className="text-navy font-medium text-sm">{value}</p>
+                        <p className="text-navy font-medium text-sm leading-snug">{value}</p>
                       )}
-                      {sub && <p className="text-charcoal/35 text-[10px] mt-0.5">{sub}</p>}
+                      {sub && <p className="text-charcoal/45 text-[10px] mt-0.5">{sub}</p>}
                     </div>
                   </div>
                 ))}
@@ -154,16 +164,16 @@ export default function Contact() {
               <div className="rounded-2xl overflow-hidden border border-navy/15 shadow-card">
                 <img
                   src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80"
-                  alt="Gujarat, India — SCARFACE office location"
+                  alt="Junagadh, Gujarat, India — SCARFACE office location"
                   className="w-full h-48 object-cover"
                   loading="lazy"
                 />
                 <div className="p-4 bg-white border-t border-navy/8">
                   <p className="text-navy font-heading font-semibold text-sm flex items-center gap-2">
                     <MapPin size={13} className="text-gold" />
-                    Gujarat, India
+                    Joshipara, Junagadh – 362001, Gujarat, India
                   </p>
-                  <p className="text-charcoal/50 text-xs mt-1">Interactive map to be added with actual address</p>
+                  <p className="text-charcoal/50 text-xs mt-1">Shop no. 1, Riddhi villa building, Behind genius public school</p>
                 </div>
               </div>
             </div>
