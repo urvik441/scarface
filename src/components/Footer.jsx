@@ -27,13 +27,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-flex mb-5 group" aria-label="SCARFACE Home">
-              <div className="bg-white/95 hover:bg-white px-4 py-2 rounded-xl transition-all duration-300 shadow-md border border-white/20">
-                <img
-                  src="/logo.png"
-                  alt="SCARFACE — The Face of Global Trade"
-                  className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+              <img
+                src="/logo.png"
+                alt="SCARFACE — The Face of Global Trade"
+                className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+              />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Connecting quality Indian products with international markets through trust, reliability, and professional global trade.

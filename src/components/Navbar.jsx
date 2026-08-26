@@ -39,15 +39,13 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}>
       <div className="container-max">
         <nav className="flex items-center justify-between h-18 py-3" aria-label="Main navigation">
-          {/* Logo — Single image logo using SCARFACE_png.png */}
+          {/* Logo — Direct transparent PNG with larger size */}
           <Link to="/" className="flex-shrink-0 group" aria-label="SCARFACE Home">
-            <div className="bg-white/95 hover:bg-white px-3.5 py-1.5 rounded-xl transition-all duration-300 shadow-sm flex items-center justify-center border border-white/20">
-              <img
-                src="/logo.png"
-                alt="SCARFACE — The Face of Global Trade"
-                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
+            <img
+              src="/logo.png"
+              alt="SCARFACE — The Face of Global Trade"
+              className="h-14 sm:h-16 md:h-18 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_0_2px_rgba(255,255,255,0.7)]"
+            />
           </Link>
 
           {/* Desktop Nav */}
