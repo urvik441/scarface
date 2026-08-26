@@ -19,14 +19,22 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     line-height: 1.2;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -72,36 +80,35 @@
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F7F7F5;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #1F4050;
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #C6A05F;
 }
 
 /* Hero video/image overlay */
 .hero-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(15, 28, 35, 0.82) 0%,
-    rgba(31, 64, 80, 0.65) 60%,
-    rgba(31, 64, 80, 0.3) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(89, 147, 178, 0.82) 0%,
+      rgba(31, 64, 80, 0.65) 60%,
+      rgba(31, 64, 80, 0.3) 100%);
 }
 
 /* Gold shimmer text */
 .gold-shimmer {
-  background: linear-gradient(
-    90deg,
-    #C6A05F 0%,
-    #F0D89B 45%,
-    #C6A05F 55%,
-    #A8863E 100%
-  );
+  background: linear-gradient(90deg,
+      #C6A05F 0%,
+      #F0D89B 45%,
+      #C6A05F 55%,
+      #A8863E 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -117,13 +124,20 @@
   right: -50%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #C6A05F, rgba(198,160,95,0.2));
+  background: linear-gradient(90deg, #C6A05F, rgba(198, 160, 95, 0.2));
 }
 
 /* Map pulse animation */
 @keyframes pulse-ring {
-  0% { transform: scale(0.8); opacity: 0.8; }
-  100% { transform: scale(2); opacity: 0; }
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 .map-pulse::after {
