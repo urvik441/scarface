@@ -160,13 +160,15 @@ export default function Contact() {
                 ))}
               </div>
 
-              {/* Map placeholder */}
+              {/* Interactive Google Map */}
               <div className="rounded-2xl overflow-hidden border border-navy/15 shadow-card">
-                <img
-                  src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80"
-                  alt="Junagadh, Gujarat, India — SCARFACE office location"
-                  className="w-full h-48 object-cover"
+                <iframe
+                  title="SCARFACE Office Location — Junagadh, Gujarat"
+                  src="https://maps.google.com/maps?q=Shop%20no.%201%2C%20Riddhi%20villa%20building%2C%20Khalipur%20main%20road%2C%20Joshipara%2C%20Junagadh%20362001%20Gujarat%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-56 border-0"
+                  allowFullScreen=""
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
                 <div className="p-4 bg-white border-t border-navy/8">
                   <p className="text-navy font-heading font-semibold text-sm flex items-center gap-2">

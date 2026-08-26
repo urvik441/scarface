@@ -10,16 +10,23 @@ export default function Products() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [filteredProducts, setFilteredProducts] = useState(products)
   const [searchQuery, setSearchQuery] = useState('')
+  const [debouncedQuery, setDebouncedQuery] = useState('')
   const [animKey, setAnimKey] = useState(0)
+
+  // Debounce search input by 250ms
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(searchQuery), 250)
+    return () => clearTimeout(timer)
+  }, [searchQuery])
 
   useEffect(() => {
     const filtered = getProductsByCategory(activeCategory).filter(p =>
-      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.shortDescription.toLowerCase().includes(searchQuery.toLowerCase())
+      p.name.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
+      p.shortDescription.toLowerCase().includes(debouncedQuery.toLowerCase())
     )
     setFilteredProducts(filtered)
     setAnimKey(k => k + 1)
-  }, [activeCategory, searchQuery])
+  }, [activeCategory, debouncedQuery])
 
   return (
     <>
