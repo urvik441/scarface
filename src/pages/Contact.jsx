@@ -49,13 +49,16 @@ export default function Contact() {
     return e
   }
 
+  const [apiError, setApiError] = useState('')
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm(f => ({ ...f, [name]: value }))
     if (errors[name]) setErrors(er => ({ ...er, [name]: '' }))
+    if (apiError) setApiError('')
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) {
@@ -63,10 +66,40 @@ export default function Contact() {
       return
     }
     setStatus('loading')
-    // Simulated submission (no backend in v1)
-    setTimeout(() => {
-      setStatus('success')
-    }, 1500)
+    setApiError('')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'f93ec51e-94c1-4320-81fc-a3cd7d18308e',
+          from_name: 'SCARFACE Export Website',
+          subject: `New Export Enquiry from ${form.name} — ${form.product || 'General'}`,
+          name: form.name,
+          company: form.company || 'Not provided',
+          email: form.email,
+          phone: form.phone || 'Not provided',
+          country: form.country || 'Not specified',
+          product: form.product || 'General Inquiry',
+          message: form.message,
+        }),
+      })
+
+      const data = await response.json()
+      if (data.success) {
+        setStatus('success')
+      } else {
+        setApiError(data.message || 'Something went wrong. Please try again or contact us directly.')
+        setStatus('idle')
+      }
+    } catch (err) {
+      setApiError('Network error. Please check your internet connection or email us directly at scarfaceoverseas@gmail.com')
+      setStatus('idle')
+    }
   }
 
   const inputClass = (field) =>
@@ -313,6 +346,13 @@ export default function Contact() {
                       {errors.message && <p className="text-red-400 text-xs mt-1.5 flex items-center gap-1"><AlertCircle size={11} />{errors.message}</p>}
                     </div>
 
+                    {apiError && (
+                      <div className="mb-5 p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-xs flex items-center gap-2">
+                        <AlertCircle size={14} className="flex-shrink-0" />
+                        <span>{apiError}</span>
+                      </div>
+                    )}
+
                     <button
                       id="contact-submit-btn"
                       type="submit"
@@ -332,8 +372,8 @@ export default function Contact() {
                       )}
                     </button>
 
-                    <p className="text-charcoal/35 text-xs text-center mt-4">
-                      This form does not submit to a server in the current version. Integration to be added.
+                    <p className="text-charcoal/45 text-xs text-center mt-4">
+                      Directly delivered to our export team. We respect your privacy and respond within 24 hours.
                     </p>
                   </form>
                 )}

@@ -146,6 +146,23 @@ export default function ProductDetail() {
                 </ul>
               </div>
 
+              {/* Container Capacity */}
+              {product.containerCapacity && product.containerCapacity.length > 0 && (
+                <div className="bg-white rounded-2xl p-6 shadow-card border border-navy/8">
+                  <h3 className="font-heading font-bold text-navy text-lg mb-4">Container Capacity</h3>
+                  <div className="space-y-3">
+                    {product.containerCapacity.map(cap => (
+                      <div key={cap.type} className="flex justify-between items-start gap-3 py-2.5 border-b border-navy/6 last:border-0">
+                        <span className="text-charcoal/55 text-xs font-semibold tracking-wide uppercase font-heading flex-shrink-0">
+                          {cap.type}
+                        </span>
+                        <span className="text-navy text-sm font-medium text-right">{cap.quantity}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Quick CTA */}
               <div className="bg-navy rounded-2xl p-6 border border-gold/20">
                 <h3 className="font-heading font-bold text-white text-base mb-2">Interested in this product?</h3>
