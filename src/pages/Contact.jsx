@@ -42,9 +42,13 @@ export default function Contact() {
 
   const validate = () => {
     const e = {}
-    if (!form.name.trim()) e.name = 'Name is required'
-    if (!form.email.trim()) e.email = 'Email is required'
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Enter a valid email'
+    if (!form.name.trim()) e.name = 'Full Name is required'
+    if (!form.company.trim()) e.company = 'Company Name is required'
+    if (!form.email.trim()) e.email = 'Email Address is required'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Enter a valid email address'
+    if (!form.phone.trim()) e.phone = 'Phone / WhatsApp number is required'
+    if (!form.country.trim()) e.country = 'Please select your country'
+    if (!form.product.trim() || form.product === '') e.product = 'Please select a product'
     if (!form.message.trim()) e.message = 'Message is required'
     return e
   }
@@ -264,14 +268,15 @@ export default function Contact() {
                       {/* Company */}
                       <div>
                         <label htmlFor="company" className="block text-xs font-semibold text-charcoal/60 tracking-wide uppercase font-heading mb-2">
-                          Company Name
+                          Company Name <span className="text-red-400">*</span>
                         </label>
                         <input
                           id="company" name="company" type="text"
                           value={form.company} onChange={handleChange}
-                          placeholder="Your company (optional)"
+                          placeholder="Your company name"
                           className={inputClass('company')}
                         />
+                        {errors.company && <p className="text-red-400 text-xs mt-1.5 flex items-center gap-1"><AlertCircle size={11} />{errors.company}</p>}
                       </div>
 
                       {/* Email */}
@@ -291,7 +296,7 @@ export default function Contact() {
                       {/* Phone */}
                       <div>
                         <label htmlFor="phone" className="block text-xs font-semibold text-charcoal/60 tracking-wide uppercase font-heading mb-2">
-                          Phone Number
+                          Phone Number <span className="text-red-400">*</span>
                         </label>
                         <input
                           id="phone" name="phone" type="tel"
@@ -299,12 +304,13 @@ export default function Contact() {
                           placeholder="+1 234 567 8900"
                           className={inputClass('phone')}
                         />
+                        {errors.phone && <p className="text-red-400 text-xs mt-1.5 flex items-center gap-1"><AlertCircle size={11} />{errors.phone}</p>}
                       </div>
 
                       {/* Country */}
                       <div>
                         <label htmlFor="country" className="block text-xs font-semibold text-charcoal/60 tracking-wide uppercase font-heading mb-2">
-                          Country
+                          Country <span className="text-red-400">*</span>
                         </label>
                         <select
                           id="country" name="country"
@@ -314,20 +320,23 @@ export default function Contact() {
                           <option value="">Select your country</option>
                           {countries.map(c => <option key={c} value={c}>{c}</option>)}
                         </select>
+                        {errors.country && <p className="text-red-400 text-xs mt-1.5 flex items-center gap-1"><AlertCircle size={11} />{errors.country}</p>}
                       </div>
 
                       {/* Product */}
                       <div>
                         <label htmlFor="product" className="block text-xs font-semibold text-charcoal/60 tracking-wide uppercase font-heading mb-2">
-                          Product Interested In
+                          Product Interested In <span className="text-red-400">*</span>
                         </label>
                         <select
                           id="product" name="product"
                           value={form.product} onChange={handleChange}
                           className={inputClass('product') + ' cursor-pointer'}
                         >
+                          <option value="">Select a product</option>
                           {productOptions.map(p => <option key={p} value={p}>{p}</option>)}
                         </select>
+                        {errors.product && <p className="text-red-400 text-xs mt-1.5 flex items-center gap-1"><AlertCircle size={11} />{errors.product}</p>}
                       </div>
                     </div>
 
