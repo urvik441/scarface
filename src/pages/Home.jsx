@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, ChevronDown, Globe, ShieldCheck,
-  Truck, Package, MessageCircle, Handshake, Award, Clock
+  Truck, Package, MessageCircle, Handshake, Award, Clock,
+  BadgePercent
 } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 import ProductCard from '../components/ProductCard'
@@ -45,14 +46,14 @@ const whyData = [
     desc: 'Products and processes aligned with international food safety and trade documentation requirements.',
   },
   {
-    Icon: Package,
-    title: 'Reliable Supply',
-    desc: 'We work toward dependable sourcing continuity so buyers receive consistent quantities on schedule.',
+    Icon: BadgePercent,
+    title: 'Competitive Pricing',
+    desc: 'We offer competitive pricing backed by reliable sourcing and efficient supply-chain management. Our flexible pricing ensures excellent value while maintaining consistent product quality and export standards.',
   },
   {
     Icon: Truck,
     title: 'Efficient Logistics',
-    desc: 'Coordinated shipping and documentation support for smoother international trade and delivery.',
+    desc: 'Coordinated shipping and documentation support for smoother international trade and delivery. We work toward dependable sourcing continuity so buyers receive consistent quantities on schedule.',
   },
   {
     Icon: MessageCircle,
@@ -71,29 +72,29 @@ const stepsData = [
   {
     num: '01',
     title: 'Source',
-    desc: 'Identify reliable suppliers, evaluate quality, and establish dependable sourcing channels across India.',
+    desc: 'Identify reliable suppliers, evaluate quality, and establish dependable sourcing channels across India. We also source the best-quality raw materials directly from farmers and inspect all materials carefully to ensure quality and consistency.',
   },
   {
     num: '02',
-    title: 'Verify',
-    desc: 'Quality checks, specifications review, appropriate packaging, and documentation compliance.',
+    title: 'Quality Verification',
+    desc: 'Ensure quality through detailed inspections, specifications review, and advanced Sortex machine cleaning. Our modern cleaning process reduces manual handling and helps deliver clean, consistent, and export-ready materials.',
   },
   {
     num: '03',
-    title: 'Export',
-    desc: 'Coordinate logistics, customs clearance, freight, and international shipping documentation.',
+    title: 'Packaging',
+    desc: 'Packaging and fumigation processes are handled in a hygienic and contamination-free environment to preserve freshness, aroma, and quality. We utilise food-grade materials and follow industry best practices to ensure products remain safe, clean, and suitable for international shipping.',
   },
   {
     num: '04',
-    title: 'Deliver',
-    desc: 'Support smooth delivery and build long-term buyer relationships through consistent service.',
+    title: 'Delivery',
+    desc: 'Coordinate logistics, customs clearance, freight arrangements, and international shipping documentation to ensure a smooth and efficient export process from India.',
   },
 ]
 
 /* ─── STATS DATA ─────────────────────────────────────────────────────── */
 const statsData = [
   { value: '10', suffix: '+', label: 'Product Categories' },
-  { value: '15', suffix: '+', label: 'Target Markets' },
+  { value: '6', suffix: '', label: 'Global Regions' },
   { value: '100', suffix: '%', label: 'Commitment to Quality' },
   { value: '24/7', suffix: '', label: 'Global Communication' },
 ]
@@ -134,7 +135,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="h-px w-10 bg-gold/60" />
               <span className="text-gold text-xs font-semibold tracking-[0.3em] uppercase font-heading">
-                Gujarat, India · Global Markets
+                Gujarat, India · Global Trade
               </span>
               <span className="h-px w-10 bg-gold/60" />
             </div>
@@ -149,7 +150,7 @@ export default function Home() {
 
             {/* Subtext */}
             <p className="text-white/75 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-              SCARFACE is an India-based import and export company connecting quality products with trusted international markets across five continents.
+              SCARFACE is an India-based import and export company connecting quality products with trusted international buyers across South America, Europe, Africa, Asia, North America, and Central America.
             </p>
 
             {/* CTAs */}
@@ -372,49 +373,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── GLOBAL TEASER ──────────────────────────────────────── */}
-      <section
-        id="global-teaser"
-        className="section-pad relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #152D3A 0%, #1F4050 60%, #2A5568 100%)',
-        }}
-        aria-label="Global reach teaser"
-      >
-        <div className="absolute inset-0 opacity-10" aria-hidden="true">
-          <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-
-        <div className="container-max relative z-10">
-          <div className="max-w-2xl mx-auto text-center">
-            <span className="text-gold text-xs font-semibold tracking-[0.22em] uppercase font-heading block mb-3">Our Global Reach</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-5">
-              India to the World
-            </h2>
-            <div className="w-14 h-0.5 bg-gold mx-auto mb-6" />
-            <p className="text-white/65 text-base sm:text-lg leading-relaxed mb-8">
-              With Gujarat as our base, SCARFACE targets international markets across the Middle East, Africa, Europe, Asia, and beyond.
-            </p>
-            {/* Market chips */}
-            <div className="flex flex-wrap gap-3 justify-center mb-10">
-              {['Middle East', 'Africa', 'Europe', 'Southeast Asia', 'North America', 'Asia Pacific'].map(m => (
-                <span key={m} className="px-4 py-1.5 rounded-full border border-gold/40 text-gold text-xs font-semibold font-heading tracking-wide">
-                  {m}
-                </span>
-              ))}
-            </div>
-            <Link to="/global-markets" className="btn-primary">
-              Explore Global Markets
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ─── CTA BANNER ─────────────────────────────────────────── */}
       <CTASection

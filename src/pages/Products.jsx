@@ -37,8 +37,8 @@ export default function Products() {
         aria-label="Products page hero"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1563694983011-6f4d90358083?w=1920&q=80')` }}
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=1920&q=80')` }}
         />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
         <div className="container-max relative z-10 text-center">

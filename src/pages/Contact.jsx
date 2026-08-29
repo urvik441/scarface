@@ -7,13 +7,20 @@ import { companyDetails } from '../data/company'
 const productOptions = ['General Inquiry', ...products.map(p => p.name)]
 
 const countries = [
-  'United Arab Emirates', 'Saudi Arabia', 'Kuwait', 'Qatar', 'Oman', 'Bahrain',
-  'Nigeria', 'Ghana', 'Kenya', 'South Africa', 'Ethiopia', 'Tanzania',
-  'Germany', 'United Kingdom', 'Netherlands', 'France', 'Spain', 'Italy',
-  'USA', 'Canada',
-  'Vietnam', 'Thailand', 'Malaysia', 'Indonesia', 'Philippines', 'Singapore',
-  'Japan', 'South Korea', 'Australia', 'China',
-  'India', 'Other',
+  // North America
+  'United States', 'Canada', 'Mexico',
+  // Central America
+  'Costa Rica', 'Guatemala', 'Panama', 'Honduras', 'El Salvador', 'Nicaragua', 'Belize',
+  // South America
+  'Brazil', 'Argentina', 'Colombia', 'Chile', 'Peru', 'Ecuador',
+  // Europe
+  'United Kingdom', 'Germany', 'Netherlands', 'France', 'Spain', 'Italy', 'Poland', 'Belgium', 'Turkey',
+  // Asia
+  'India', 'United Arab Emirates', 'Saudi Arabia', 'Qatar', 'Kuwait', 'Oman', 'Bahrain',
+  'Singapore', 'Malaysia', 'Vietnam', 'Thailand', 'Indonesia', 'Philippines', 'Japan', 'South Korea', 'China',
+  // Africa
+  'South Africa', 'Nigeria', 'Egypt', 'Kenya', 'Ghana', 'Tanzania', 'Ethiopia', 'Morocco',
+  'Other',
 ]
 
 export default function Contact() {

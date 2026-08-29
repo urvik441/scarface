@@ -7,7 +7,6 @@ const footerNav = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About Us' },
   { to: '/products', label: 'Our Products' },
-  { to: '/global-markets', label: 'Global Markets' },
   { to: '/contact', label: 'Contact Us' },
 ]
 

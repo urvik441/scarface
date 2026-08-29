@@ -28,7 +28,7 @@ function useFadeIn(threshold = 0.12) {
 const values = [
   { emoji: '🤝', title: 'Integrity', desc: 'Honest and transparent in all our business dealings.' },
   { emoji: '⭐', title: 'Quality', desc: 'Consistent focus on product quality and reliability.' },
-  { emoji: '🌍', title: 'Global Mindset', desc: 'Thinking internationally while staying rooted in Gujarat.' },
+  { emoji: '🌍', title: 'Global Mindset', desc: 'Building global connections through quality, trust, and innovation.' },
   { emoji: '📋', title: 'Professionalism', desc: 'Professional communication, documentation, and service.' },
   { emoji: '🔗', title: 'Partnership', desc: 'Building long-term relationships over short-term transactions.' },
   { emoji: '📈', title: 'Growth', desc: 'Continuously improving our reach, products, and services.' },
@@ -38,7 +38,6 @@ export default function About() {
   const storyRef = useFadeIn()
   const missionRef = useFadeIn()
   const valuesRef = useFadeIn()
-  const gujaratRef = useFadeIn()
 
   return (
     <>
@@ -78,13 +77,13 @@ export default function About() {
               <h2 className="font-heading font-bold text-3xl sm:text-4xl text-navy leading-tight mb-2">Who We Are</h2>
               <div className="w-14 h-0.5 bg-gold mb-6" />
               <p className="text-charcoal/70 text-base leading-relaxed mb-5">
-                SCARFACE is a Gujarat-based import and export company with a mission to connect India's finest products with international buyers across the world. Founded with a clear vision for global trade, we operate at the intersection of Indian quality and international commerce.
+                SCARFACE is a India-based import and export company with a mission to connect India's finest products with international buyers across the world. Founded with a clear vision for global trade, we operate at the intersection of Indian quality and international commerce.
               </p>
               <p className="text-charcoal/70 text-base leading-relaxed mb-5">
-                Gujarat has long been a hub of commerce and entrepreneurship. We leverage this heritage to build trade relationships that are not just transactional, but long-term and mutually beneficial. Our team is committed to professional, transparent, and reliable service at every stage of the export process.
+                India has long been a hub of commerce and entrepreneurship. We leverage this heritage to build trade relationships that are not just transactional, but long-term and mutually beneficial. Our team is committed to professional, transparent, and reliable service at every stage of the export process.
               </p>
               <p className="text-charcoal/70 text-base leading-relaxed">
-                We specialise in sourcing and exporting high-quality agricultural products, spices, dehydrated products, oilseeds, and food commodities — serving buyers across the Middle East, Africa, Europe, and Asia.
+                We specialise in sourcing and exporting quality pulses, spices, oilseeds, and feed-meals, carefully selected to meet the requirements of international buyers. From direct sourcing and quality inspection to proper processing, packaging, and export coordination, we focus on delivering consistent products and dependable service to customers across South America, Europe, Africa, Asia, North America, and Central America.
               </p>
             </div>
 
@@ -161,58 +160,6 @@ export default function About() {
                   </h3>
                   <p className="text-charcoal/60 text-sm leading-relaxed">{desc}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── GUJARAT ORIGIN ─────────────────────────────────────── */}
-      <section
-        id="gujarat-origin"
-        className="section-pad relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #1F4050 0%, #152D3A 100%)' }}
-        aria-label="Gujarat origin section"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80')` }}
-        />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-
-        <div
-          ref={gujaratRef}
-          className="container-max relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center opacity-0 translate-y-8 transition-all duration-700"
-        >
-          <div>
-            <span className="text-gold text-xs font-semibold tracking-[0.22em] uppercase font-heading block mb-3">Our Roots</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white leading-tight mb-5">
-              Proudly from Gujarat, India
-            </h2>
-            <div className="w-14 h-0.5 bg-gold mb-6" />
-            <p className="text-white/65 text-base leading-relaxed mb-5">
-              Gujarat is one of India's most commercially vibrant states — home to some of the world's largest ports (Mundra, Kandla), a rich tradition of trade, and a thriving agricultural and industrial base.
-            </p>
-            <p className="text-white/65 text-base leading-relaxed mb-8">
-              From the cumin and groundnut fields of Saurashtra to the dehydration plants of Mahuva, Gujarat is a natural hub for quality Indian exports. SCARFACE is proud to call this state home and to represent its products to the world.
-            </p>
-            <Link to="/global-markets" className="btn-primary">
-              See Our Global Markets
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icon: '🚢', label: 'Major Ports', value: 'Mundra & Kandla' },
-              { icon: '🌾', label: 'Key Produce', value: 'Spices, Groundnut, Cotton' },
-              { icon: '🏭', label: 'Industry', value: 'Dehydration & Processing' },
-              { icon: '🌍', label: 'Trade Heritage', value: 'Centuries of Commerce' },
-            ].map(({ icon, label, value }) => (
-              <div key={label} className="bg-white/8 border border-white/15 rounded-xl p-5 hover:border-gold/30 transition-all duration-300">
-                <span className="text-2xl block mb-2">{icon}</span>
-                <p className="text-gold text-[10px] tracking-widest uppercase font-heading font-semibold mb-1">{label}</p>
-                <p className="text-white font-heading font-semibold text-sm">{value}</p>
               </div>
             ))}
           </div>

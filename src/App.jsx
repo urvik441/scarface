@@ -5,7 +5,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail'
-import GlobalMarkets from './pages/GlobalMarkets'
 import Contact from './pages/Contact'
 
 // Scroll to top on route change
@@ -27,7 +26,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:slug" element={<ProductDetail />} />
-          <Route path="/global-markets" element={<GlobalMarkets />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>

@@ -13,9 +13,9 @@ export default function StatCounter({ value, suffix = '', label, prefix = '' }) 
   const [hasAnimated, setHasAnimated] = useState(false)
   const ref = useRef(null)
 
-  // Handle non-numeric values like '24/7'
-  const isNumeric = !isNaN(parseInt(value))
-  const numericTarget = parseInt(value) || 0
+  // Handle purely numeric values vs text/composite values like '24/7'
+  const isNumeric = typeof value === 'number' || /^\d+$/.test(String(value).trim())
+  const numericTarget = isNumeric ? parseInt(value, 10) : 0
 
   useEffect(() => {
     if (!isNumeric) {
