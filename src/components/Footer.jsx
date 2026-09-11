@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Mail, Phone, Linkedin, Twitter, Instagram, ArrowRight } from 'lucide-react'
-import { products } from '../data/products'
+import { categories } from '../data/products'
 import { companyDetails } from '../data/company'
 
 const footerNav = [
@@ -10,10 +10,13 @@ const footerNav = [
   { to: '/contact', label: 'Contact Us' },
 ]
 
-const productLinks = products.slice(0, 6).map(p => ({
-  to: `/products/${p.slug}`,
-  label: p.name,
-}))
+const categoryLinks = [
+  { to: '/products?category=pulses', label: 'Pulses' },
+  { to: '/products?category=spices', label: 'Spices' },
+  { to: '/products?category=oilseeds', label: 'Oil Seeds' },
+  { to: '/products?category=feedmeals', label: 'Feed Meals' },
+  { to: '/products', label: 'All Categories' },
+]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -73,11 +76,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Our Products */}
+          {/* Our Categories */}
           <div>
-            <h3 className="font-heading font-bold text-navy mb-5 text-sm tracking-widest uppercase">Our Products</h3>
+            <h3 className="font-heading font-bold text-navy mb-5 text-sm tracking-widest uppercase">Our Categories</h3>
             <ul className="space-y-3">
-              {productLinks.map(link => (
+              {categoryLinks.map(link => (
                 <li key={link.to}>
                   <Link
                     to={link.to}

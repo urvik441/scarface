@@ -89,9 +89,9 @@ export default function About() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
-                alt="Business handshake representing global trade partnerships"
-                className="w-full h-[400px] object-cover rounded-2xl shadow-card-hover"
+                src="/about-who-we-are.jpg"
+                alt="Indian agricultural commodities export - quality pulses, spices, and oilseeds for international trade"
+                className="w-full h-[460px] object-cover rounded-2xl shadow-card-hover"
                 loading="lazy"
               />
               <div className="absolute -bottom-4 -left-4 bg-navy rounded-2xl px-6 py-4 border border-gold/25 shadow-navy">

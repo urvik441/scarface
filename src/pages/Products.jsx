@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 import ProductCard from '../components/ProductCard'
@@ -7,11 +7,18 @@ import CTASection from '../components/CTASection'
 import { products, categories, getProductsByCategory } from '../data/products'
 
 export default function Products() {
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const categoryParam = searchParams.get('category') || 'all'
+  const [activeCategory, setActiveCategory] = useState(categoryParam)
   const [filteredProducts, setFilteredProducts] = useState(products)
   const [searchQuery, setSearchQuery] = useState('')
   const [debouncedQuery, setDebouncedQuery] = useState('')
   const [animKey, setAnimKey] = useState(0)
+
+  // Keep active category in sync with URL search params
+  useEffect(() => {
+    setActiveCategory(categoryParam)
+  }, [categoryParam])
 
   // Debounce search input by 250ms
   useEffect(() => {
@@ -27,6 +34,15 @@ export default function Products() {
     setFilteredProducts(filtered)
     setAnimKey(k => k + 1)
   }, [activeCategory, debouncedQuery])
+
+  const handleCategorySelect = (catId) => {
+    setActiveCategory(catId)
+    if (catId === 'all') {
+      setSearchParams({})
+    } else {
+      setSearchParams({ category: catId })
+    }
+  }
 
   return (
     <>
@@ -78,7 +94,7 @@ export default function Products() {
                 role="tab"
                 aria-selected={activeCategory === cat.id}
                 id={`cat-tab-${cat.id}`}
-                onClick={() => setActiveCategory(cat.id)}
+                onClick={() => handleCategorySelect(cat.id)}
                 className={`px-5 py-2.5 rounded-full text-sm font-semibold font-heading tracking-wide transition-all duration-300 ${
                   activeCategory === cat.id
                     ? 'bg-navy text-white shadow-navy'
