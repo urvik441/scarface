@@ -23,6 +23,6 @@ export const companyDetails = {
   social: {
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com',
-    instagram: 'https://instagram.com',
+    instagram: 'https://www.instagram.com/scarface_overseas?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==',
   },
 }

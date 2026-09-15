@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="inline-flex mb-5 group" aria-label="SCARFACE Home">
               <img
-                src="/logo.png"
+                src="/SCARFACE_TM.png"
                 alt="SCARFACE — The Face of Global Trade"
                 className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
@@ -42,13 +42,15 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex items-center gap-3">
               {[
-                { Icon: Linkedin, label: 'LinkedIn', href: '#' },
-                { Icon: Twitter, label: 'Twitter', href: '#' },
-                { Icon: Instagram, label: 'Instagram', href: '#' },
+                { Icon: Linkedin, label: 'LinkedIn', href: companyDetails.social?.linkedin || '#' },
+                { Icon: Twitter, label: 'Twitter', href: companyDetails.social?.twitter || '#' },
+                { Icon: Instagram, label: 'Instagram', href: companyDetails.social?.instagram || 'https://www.instagram.com/scarface_overseas?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==' },
               ].map(({ Icon, label, href }) => (
                 <a
                   key={label}
                   href={href}
+                  target={href !== '#' ? '_blank' : undefined}
+                  rel={href !== '#' ? 'noopener noreferrer' : undefined}
                   aria-label={`SCARFACE on ${label}`}
                   className="w-9 h-9 rounded-full border border-navy/20 flex items-center justify-center text-navy/70 hover:border-gold hover:text-gold hover:bg-gold/10 transition-all duration-300"
                 >

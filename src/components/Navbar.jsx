@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Logo — Direct transparent PNG with optimal sizing */}
           <Link to="/" className="flex-shrink-0 group" aria-label="SCARFACE Home">
             <img
-              src="/logo.png"
+              src="/SCARFACE_TM.png"
               alt="SCARFACE — The Face of Global Trade"
               className={`h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${!isLight ? 'drop-shadow-[0_1px_4px_rgba(255,255,255,0.85)]' : ''
                 }`}
