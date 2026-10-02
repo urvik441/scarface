@@ -45,11 +45,15 @@ export default function ProductDetail() {
         <div className="container-max pb-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pb-0">
             {/* Image */}
-            <div className="relative overflow-hidden rounded-t-2xl lg:rounded-2xl h-72 sm:h-96">
+            <div className="relative overflow-hidden rounded-t-2xl lg:rounded-2xl h-72 sm:h-96 bg-navy/5">
               <img
                 src={product.image}
                 alt={product.name}
+                width="800"
+                height="450"
                 className="w-full h-full object-cover"
+                fetchPriority="high"
+                decoding="async"
               />
               {/* Category */}
               <span className="absolute top-4 left-4 flex items-center gap-1 bg-navy/90 backdrop-blur-sm border border-gold/30 text-gold text-[10px] font-semibold tracking-wider uppercase px-3 py-1.5 rounded-full">

@@ -117,7 +117,7 @@ export const products = [
     categoryLabel: 'Pulses',
     shortDescription: 'High-protein sortex-cleaned Indian Moong Dal with 24% min protein and superior digestibility.',
     description: `Moong Dal (Split Mung Lentils) from India is globally renowned for its high 24% min protein content, easy digestibility, and culinary versatility.\n\nSourced from top pulse-growing belts in India, processed using advanced 100% Sortex cleaning to maintain less than 0.5% damaged kernels, zero chemical polishing, and pristine golden quality.`,
-    image: '/products/moong-dal.png',
+    image: '/products/moong-dal.jpg',
     specifications: [
       { label: 'Product Name', value: 'Moong Dal' },
       { label: 'Place of Origin', value: 'India' },
@@ -148,7 +148,7 @@ export const products = [
     categoryLabel: 'Pulses',
     shortDescription: 'High-protein sortex-cleaned Indian Moth Dal (Turkish Gram / Matki) with 22% min protein.',
     description: `Moth Dal (Turkish Gram / Matki) is a nutritious pulse widely utilized in savoury food snacks, namkeen, and traditional cuisine. Known for its earthy aroma, rich mineral profile, and 22% min protein content.\n\nSourced from established agricultural belts in India, sortex cleaned to ensure less than 0.5% damaged kernels and peak purity for international food buyers.`,
-    image: '/products/moth-dal.png',
+    image: '/products/moth-dal.jpg',
     specifications: [
       { label: 'Product Name', value: 'Moth Dal' },
       { label: 'Place of Origin', value: 'India' },
@@ -178,7 +178,7 @@ export const products = [
     categoryLabel: 'Pulses',
     shortDescription: 'High-protein sortex-cleaned Indian Masoor Dal (Red Lentils) with 24% min protein and rich texture.',
     description: `Masoor Dal (Red Split Lentils / Masoor Malka) is a prized global export pulse celebrated for its fast-cooking properties, creamy consistency, and elevated 24% min protein profile.\n\nProcessed with advanced 100% Sortex cleaning and optical grading to maintain less than 1% damaged kernels, zero artificial polishing, and bright natural color for international food importers and distributors.`,
-    image: '/products/masoor-dal.png',
+    image: '/products/masoor-dal.jpg',
     specifications: [
       { label: 'Product Name', value: 'Masoor Dal' },
       { label: 'Place of Origin', value: 'India' },
@@ -210,7 +210,7 @@ export const products = [
     categoryLabel: 'Spices',
     shortDescription: 'Premium Indian whole Cumin Seeds (Jeera) — available in Singapore, Europe, and Gulf qualities with up to 99.5% purity.',
     description: `Cumin seeds (Cuminum cyminum) from India are globally prized for their distinctive warm aroma, deep earthy taste, and penetrating essential oil flavour. Sourced directly from premier growing regions across India.\n\nProcessed in hygienic facilities with advanced Machine Cleaned and Sortex Cleaned technologies. Available in 98%, 99%, and 99.50% purity grades tailored for international spice packers, extractors, and food processors.`,
-    image: '/products/cumin-seeds.png',
+    image: '/products/cumin-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Cumin Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -242,7 +242,7 @@ export const products = [
     categoryLabel: 'Spices',
     shortDescription: 'Aromatic green Indian Fennel Seeds (Saunf) — Singapore, USA, Gulf & Europe qualities, sortex cleaned with 8% max moisture.',
     description: `Fennel seeds (Foeniculum vulgare) from India are internationally esteemed for their sweet liquorice flavour, vibrant natural aroma, and digestive properties. Used widely across confectionery, bakery, seasonings, teas, and herbal preparations.\n\nProcessed with advanced Machine Cleaned and Sortex Cleaned grading to meet strict food safety standards including microbiological and ash limits.`,
-    image: '/products/fennel-seeds.png',
+    image: '/products/fennel-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Fennel Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -274,7 +274,7 @@ export const products = [
     categoryLabel: 'Spices',
     shortDescription: 'Aromatic Indian Coriander Seeds (Dhaniya) — Eagle Whole & Split, Scooter, Single Parrot, Double Parrot & XO qualities with 8% max moisture.',
     description: `Coriander seeds (Coriandrum sativum) are an essential Indian export spice prized for their distinct citrusy aroma and penetrating flavour. Widely utilized in spice blends, curry powders, meat seasoning, pickling, and food processing.\n\nProcessed with advanced Machine Cleaned and Sortex Cleaned systems to ensure less than 4% split seeds and strict quality compliance.`,
-    image: '/products/coriander-seeds.png',
+    image: '/products/coriander-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Coriander Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -305,7 +305,7 @@ export const products = [
     categoryLabel: 'Spices',
     shortDescription: 'Pure Indian whole Psyllium Seeds (Isabgol) — 98% & 99% purity min with high mucilage and dietary fibre content.',
     description: `India is the global epicenter for Psyllium (Plantago ovata / Isabgol) production and export. The whole seed contains high levels of soluble mucilage and natural dietary fiber.\n\nSourced directly from prime cultivation zones in India, cleaned to 98% / 99% purity standards for pharmaceutical formulations, seed extraction, nutraceuticals, and functional foods globally.`,
-    image: '/products/psyllium-seeds.png',
+    image: '/products/psyllium-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Psyllium Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -336,7 +336,7 @@ export const products = [
     categoryLabel: 'Spices',
     shortDescription: 'Pure Indian Psyllium Husk (Isabgol) & micronized Powder — 98% & 99% purity min with high swell volume for pharma, baking & nutrition.',
     description: `Psyllium Husk is the pure outer membrane milled from the seeds of Plantago Ovata, recognized globally as the gold standard for natural soluble dietary fibre. Psyllium Powder is produced by micronizing pure husk into fine mesh particles.\n\nSourced and processed in India to meet strict USP / BP / EP pharmacopoeia standards for pharmaceutical formulations, gluten-free baking, and functional nutraceuticals worldwide.`,
-    image: '/products/psyllium-husk-powder.png',
+    image: '/products/psyllium-husk-powder.jpg',
     specifications: [
       { label: 'Product Name', value: 'Psyllium Husk and Powder' },
       { label: 'Place of Origin', value: 'India' },
@@ -368,7 +368,7 @@ export const products = [
     categoryLabel: 'Oil Seeds',
     shortDescription: 'Premium Sortex Cleaned Indian Hulled Sesame Seeds — 99.98%, 99.97% & 99.95% purity with 48% min oil content and 4% max moisture.',
     description: `Hulled Sesame Seeds are produced by dehulling select Indian sesame seeds using advanced mechanical peeling and optical sortex cleaning. The resulting seeds boast a snow-white pearl finish, delicate crunch, and rich 48% min oil content.\n\nWidely exported for bakery items, confectionery, burger buns, bagels, sesame bars, and tahini / halva manufacturing worldwide.`,
-    image: '/products/hulled-sesame-seeds.png',
+    image: '/products/hulled-sesame-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Hulled Sesame Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -400,7 +400,7 @@ export const products = [
     categoryLabel: 'Oil Seeds',
     shortDescription: 'Premium Indian Natural White Sesame Seeds — 98%, 99% & 99.95% purity, machine & sortex cleaned with 48% min oil content.',
     description: `Natural White Sesame Seeds (unhulled) from India are renowned for their authentic nutty aroma, high nutritional profile, and rich 48% min oil content. Sourced directly from key farming belts across India.\n\nProcessed with advanced Machine Cleaned and Sortex Cleaned technologies. Ideal for cold-pressed sesame oil crushing, tahini paste, confectionery, bakery toppings, and culinary seasonings globally.`,
-    image: '/products/natural-sesame-seeds.png',
+    image: '/products/natural-sesame-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Natural White Sesame Seeds / Sesame Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -432,7 +432,7 @@ export const products = [
     categoryLabel: 'Oil Seeds',
     shortDescription: 'Deep natural Indian Black Sesame Seeds (Kala Til / Z-Black) — 98%, 99% & 99.95% purity, sortex cleaned with 48% min oil content.',
     description: `Black Sesame Seeds (Z-Black / Natural Black Kala Til) from India are prized for their intense jet-black appearance, robust aroma, and rich antioxidant properties.\n\nProcessed with advanced Machine Cleaned and Sortex Cleaned grading to meet strict global food quality standards for sushi, bakery items, Asian confectionery, and oil extraction.`,
-    image: '/products/black-sesame-seeds.png',
+    image: '/products/black-sesame-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Black Sesame Seeds / Z-Black Sesame Seeds / Natural Black Sesame Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -463,7 +463,7 @@ export const products = [
     categoryLabel: 'Oil Seeds',
     shortDescription: 'High-grade Indian Castor Seeds (Ricinus communis) with 50% min oil content and 29% min protein.',
     description: `India produces over 80% of the world's castor crop, making it the global capital for castor seeds and derivatives. Castor seeds are rich in non-edible ricinoleic acid and high industrial oil value.\n\nSourced and graded from prime Indian growing regions for high-yield industrial oil extraction, lubricants, polymers, paints, and global manufacturing.`,
-    image: '/products/castor-seeds.png',
+    image: '/products/castor-seeds.jpg',
     specifications: [
       { label: 'Product Name', value: 'Castor Seeds' },
       { label: 'Place of Origin', value: 'India' },
@@ -495,7 +495,7 @@ export const products = [
     categoryLabel: 'Feed Meals',
     shortDescription: 'High-protein Indian Rapeseed Meal (Mustard DOC / De-Oiled Cake) with 36% min oil & albuminoids for livestock feed.',
     description: `Rapeseed Meal (Mustard De-Oiled Cake / DOC) is an exceptional cost-effective protein source obtained during the extraction of oil from rapeseed-mustard seeds. It possesses a balanced amino acid composition, high digestibility, and essential minerals.\n\nExtensively exported across Asian, Middle Eastern, and global livestock feed sectors for cattle, poultry feed blends, and aquaculture.`,
-    image: '/products/rapeseed-meal.png',
+    image: '/products/rapeseed-meal.jpg',
     specifications: [
       { label: 'Product Type', value: 'Rapeseed Meal' },
       { label: 'Place of Origin', value: 'India' },
@@ -525,7 +525,7 @@ export const products = [
     categoryLabel: 'Feed Meals',
     shortDescription: 'Nutrient-rich Indian Soybean Meal (Soyabean DOC) with 22% - 25% protein and low moisture for animal feed.',
     description: `Soybean Meal (Soyabean Meal / DOC) from India is globally acclaimed as a high-quality protein and energy source in animal nutrition. Extensively used across poultry, swine, dairy, and aquaculture feed blending.\n\nProcessed with less than 5% moisture and consistent natural color under stringent quality control to ensure superior digestibility and safety.`,
-    image: '/products/soyabean-meal.png',
+    image: '/products/soyabean-meal.jpg',
     specifications: [
       { label: 'Product Type', value: 'Soybean Meal' },
       { label: 'Place of Origin', value: 'India' },
@@ -554,7 +554,7 @@ export const products = [
     categoryLabel: 'Feed Meals',
     shortDescription: 'Nutrient-rich Indian Groundnut Meal (Peanut Meal / DOC) with 22% - 25% protein and low moisture for animal feed.',
     description: `Groundnut Meal (Peanut Meal / Extraction) is produced after extracting oil from high-grade Indian groundnuts. Highly palatable and rich in energy, it is an essential ingredient in cattle, poultry, and aquaculture animal feed diets.\n\nProcessed under strict quality standards with less than 5% moisture and consistent natural color to meet international import requirements.`,
-    image: '/products/groundnut-meal.png',
+    image: '/products/groundnut-meal.jpg',
     specifications: [
       { label: 'Product Type', value: 'Groundnut Meal / Peanut Meal' },
       { label: 'Place of Origin', value: 'India' },
@@ -583,7 +583,7 @@ export const products = [
     categoryLabel: 'Feed Meals',
     shortDescription: 'Premium Indian Corn Gluten Feed (Maize Gluten Feed / CGF) with 18% min protein for livestock & poultry diets.',
     description: `Corn Gluten Feed (Maize Gluten Feed / CGF) is a co-product of the maize wet-milling process, providing a wholesome combination of digestible fiber, energy, and 18% min crude protein.\n\nProcessed under strict quality control to deliver a uniform yellow to light-yellow powder/pellet texture with 12% max moisture and low ash content, making it an optimal feed ingredient for ruminants, swine, and poultry globally.`,
-    image: '/products/corn-gluten-feed.png',
+    image: '/products/corn-gluten-feed.jpg',
     specifications: [
       { label: 'Product Name', value: 'Corn Gluten Feed / Maize Gluten Feed' },
       { label: 'Place of Origin', value: 'India' },
