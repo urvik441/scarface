@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Target, Eye, Heart } from 'lucide-react'
+import { ArrowRight, Target, Eye, Heart, FileDown } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 import CTASection from '../components/CTASection'
 
@@ -85,6 +85,24 @@ export default function About() {
               <p className="text-charcoal/70 text-base leading-relaxed">
                 We specialise in sourcing and exporting quality pulses, spices, oilseeds, and feed-meals, carefully selected to meet the requirements of international buyers. From direct sourcing and quality inspection to proper processing, packaging, and export coordination, we focus on delivering consistent products and dependable service to customers across South America, Europe, Africa, Asia, North America, and Central America.
               </p>
+
+              <div className="mt-8 pt-6 border-t border-navy/10 flex flex-wrap items-center gap-4">
+                <a
+                  href="/Scarface-Overseas-Company-Profile.pdf"
+                  download="Scarface-Overseas-Company-Profile.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-flex items-center gap-2 text-sm px-6 py-3"
+                  id="about-download-profile"
+                >
+                  <FileDown size={18} />
+                  Download Company Profile (PDF)
+                </a>
+                <span className="text-xs text-charcoal/55 font-medium flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-gold/70 inline-block" />
+                  Official Digital Catalog
+                </span>
+              </div>
             </div>
 
             <div className="relative">

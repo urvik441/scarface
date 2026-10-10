@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MapPin, Mail, Phone, Linkedin, Twitter, Instagram, ArrowRight } from 'lucide-react'
+import { MapPin, Mail, Phone, Linkedin, Twitter, Instagram, ArrowRight, FileDown } from 'lucide-react'
 import { categories } from '../data/products'
 import { companyDetails } from '../data/company'
 
@@ -36,9 +36,20 @@ export default function Footer() {
                 className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
-            <p className="text-charcoal/70 text-sm leading-relaxed mb-6">
+            <p className="text-charcoal/70 text-sm leading-relaxed mb-4">
               Connecting quality Indian products with international markets through trust, reliability, and professional global trade.
             </p>
+            <a
+              href="/Scarface-Overseas-Company-Profile.pdf"
+              download="Scarface-Overseas-Company-Profile.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs font-heading font-semibold text-navy bg-gold/15 hover:bg-gold hover:text-navy px-3.5 py-2 rounded-lg border border-gold/30 transition-all duration-300 mb-6 shadow-sm group"
+              id="footer-download-catalog-brand"
+            >
+              <FileDown size={14} className="text-gold group-hover:text-navy transition-colors" />
+              <span>Download E-Brochure (PDF)</span>
+            </a>
             {/* Social Icons */}
             <div className="flex items-center gap-3">
               {[
@@ -75,6 +86,19 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/Scarface-Overseas-Company-Profile.pdf"
+                  download="Scarface-Overseas-Company-Profile.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-navy text-sm transition-colors duration-200 flex items-center gap-2 group font-semibold pt-1"
+                  id="footer-download-catalog-quicklink"
+                >
+                  <FileDown size={14} className="text-gold" />
+                  Company Profile (PDF)
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, FileDown } from 'lucide-react'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -74,6 +74,22 @@ export default function Navbar() {
 
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
+            <a
+              href="/Scarface-Overseas-Company-Profile.pdf"
+              download="Scarface-Overseas-Company-Profile.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hidden sm:inline-flex items-center gap-2 text-xs md:text-sm font-heading font-semibold px-3.5 py-2 rounded-lg border transition-all duration-300 ${isLight
+                ? 'border-gold/50 text-navy hover:bg-gold/15 hover:border-gold shadow-sm'
+                : 'border-gold/40 text-white/95 hover:bg-gold/15 hover:border-gold'
+                }`}
+              id="navbar-download-catalog"
+              title="Download Company Profile (PDF)"
+            >
+              <FileDown size={15} className="text-gold" />
+              <span>Brochure</span>
+            </a>
+
             <Link
               to="/contact"
               className={`hidden lg:flex text-sm px-5 py-2.5 ${isLight ? 'btn-secondary' : 'btn-gold-outline'
@@ -122,7 +138,18 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
-          <div className={`pt-3 border-t mt-2 ${isLight ? 'border-navy/10' : 'border-white/10'}`}>
+          <div className={`pt-3 border-t mt-2 flex flex-col gap-2.5 ${isLight ? 'border-navy/10' : 'border-white/10'}`}>
+            <a
+              href="/Scarface-Overseas-Company-Profile.pdf"
+              download="Scarface-Overseas-Company-Profile.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-gold/50 text-gold text-sm font-heading font-semibold hover:bg-gold/10 transition-colors"
+              id="mobile-download-catalog"
+            >
+              <FileDown size={16} />
+              Download Company Profile (PDF)
+            </a>
             <Link
               to="/contact"
               className="btn-primary w-full text-center"

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   ArrowRight, ChevronDown, Globe, ShieldCheck,
   Truck, Package, MessageCircle, Handshake, Award, Clock,
-  BadgePercent
+  BadgePercent, FileDown
 } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 import ProductCard from '../components/ProductCard'
@@ -164,6 +164,21 @@ export default function Home() {
               </Link>
             </div>
 
+            {/* Quick Catalog Download Badge */}
+            <div className="mt-5 flex items-center justify-center">
+              <a
+                href="/Scarface-Overseas-Company-Profile.pdf"
+                download="Scarface-Overseas-Company-Profile.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-heading font-semibold text-gold/90 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-gold/30 hover:border-gold/60 transition-all duration-300 backdrop-blur-sm shadow-sm"
+                id="hero-download-catalog"
+              >
+                <FileDown size={15} className="text-gold" />
+                <span>Download Company Profile (PDF)</span>
+              </a>
+            </div>
+
             {/* Scroll indicator */}
             <div className="flex flex-col items-center mt-16 gap-2 text-white/40">
               <span className="text-xs tracking-widest uppercase font-heading">Scroll to explore</span>
@@ -232,10 +247,23 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link to="/about" className="btn-primary">
-                About SCARFACE
-                <ArrowRight size={16} />
-              </Link>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link to="/about" className="btn-primary">
+                  About SCARFACE
+                  <ArrowRight size={16} />
+                </Link>
+                <a
+                  href="/Scarface-Overseas-Company-Profile.pdf"
+                  download="Scarface-Overseas-Company-Profile.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                  id="home-download-catalog"
+                >
+                  <FileDown size={16} />
+                  Download Catalog (PDF)
+                </a>
+              </div>
             </div>
           </div>
         </div>
